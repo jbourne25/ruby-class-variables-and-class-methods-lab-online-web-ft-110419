@@ -1,120 +1,100 @@
- class Song
-   attr_accessor :name, :artist, :genre 
+class Song
+  attr_accessor :name, :artist, :genre 
    
-   @@genres = []
-   @@artists = []
-   @@count = 0
+  @@genres = []
+  @@artists = []
+  @@count = 0
    
   
-   def initialize(name, artist, genre)
-     @name     =   name 
-     @artist   =   artist
-     @@artists <<  artist 
-     @genre    =   genre
-     @@genres  <<  genre 
-     @@count   +=  1 
-   end 
-   def self.count 
-     @@count 
-   end 
+  def initialize(name, artist, genre)
+    @name     =   name 
+    @artist   =   artist
+    @@artists <<  artist 
+    @genre    =   genre
+    @@genres  <<  genre 
+    @@count   +=  1 
+  end 
+  def self.count 
+    @@count 
+  end 
   
-   def self.genres
-     @@genres.uniq 
-   end
+  def self.genres
+    @@genres.uniq 
+  end
    
-   def self.artists
-     @@artists.uniq
-   end
+  def self.artists
+    @@artists.uniq
+  end
    
-   def self.artist_count
+  def self.artist_count
     @@artists.inject(Hash.new(0)) { |total, i| total[i] += 1 ;total}
-   end
+  end
    
-   def self.genre_count
-     @@genres.inject(Hash.new(0)) { |total, i| total[i] += 1 ;total}
-   end
+  def self.genre_count
+    @@genres.inject(Hash.new(0)) { |total, i| total[i] += 1 ;total}
+  end
   
- end 
+end 
+# =======
+# class Song
   
-   
+#   @@count = 0 
+
+#   attr_accessor :name, :artist, :genre 
   
-  
-  
-  
-  
-  
-   
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# class Song 
-  
-#   @@count = 0
-  
-#   # @@count=(@@count)
-#   #   @@count = @@count 
-  
-  
-  
-#   def initialize
-#     @@count += 1
-#   end
+#   def initialize(name, artist, genre)
+#     @name     =   name 
+#     @artist   =   artist
+#     @@artists <<  artist 
+#     @genre    =   genre
+#     @@genres  <<  genre 
+#     @@count   +=  1 
+#   end 
   
 #   def self.count 
-#     @@count
+#     @@count 
 #   end 
   
+#   @@genres = []
   
-# # attr_accessor :name, :artist, :genre
- 
-#   def initialize(name, artist, genre)
-#     @name = name 
-#     @artist = artist 
-#     @genre = genre
-#   end 
+#   def self.genres
+#     @@genres.unique 
+#   end
+   
+#   @@artists = []
+   
+#   def self.artists
+#     @@artists.unique
+#   end
+   
+#   def self.artist_count
+#     @@artists.inject(Hash.new(0)) { |total, i| total[i] += 1 ;total}
+#   end
+   
+   
+#   def self.genre_count
+#     @@genres.inject(Hash.new(0)) { |total, i| total[i] += 1 ;total}
+#   end
   
-#     def name 
-#       @name 
-#     end 
-    
-#     def artist 
-#       @artist
-#     end 
-    
-#     def genre
-#       @genre
-#     end 
-    
-#     def self.genres 
-#       @@genres.unique 
-#     end 
-    
-#     @@genres = []
-    
-#     def initialize(genres)
-#       @@genres = genres 
-#     end 
-    
-#     def self.artists 
-#       @@artists
-#     end 
-    
-    # def initialize(artists)
-    #   @@artists = []
-    # end
+# end 
+# >>>>>>> 3ed3091224d2624160899c8bdeaaea652dc5b2ef
+  
+   
+  
+  
+  
+  
+  
+  
+   
+
+
+
+
+
+
+
+
     
     
   
